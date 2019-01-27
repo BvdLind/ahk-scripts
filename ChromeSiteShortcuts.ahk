@@ -1,10 +1,3 @@
-; Explanation of Signs
-; # Win (Windows logo key)
-; ! Alt
-; ^ Control
-;  Shift
-; &  An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.
-; * - fires replacement immediately, O - removes default trigger character (ahk will be triggered with space)
 
 #IfWinActive ahk_class Chrome_WidgetWin_1
 {
@@ -25,7 +18,7 @@
   run https://github.com
   Return
 
-  ~y::
+  ~y & t::
   run https://youtube.com
   Return
 
