@@ -1,25 +1,32 @@
 
 #IfWinActive ahk_class Chrome_WidgetWin_1
 {
-
   ~g & m::
-  run https://mail.google.com/mail/u/0/#inbox
+  goToSite("https://mail.google.com/mail/u/0/#inbox")
   Return
 
   ~g & c::
-  run https://calendar.google.com/calendar/r/week/
+  goToSite("https://calendar.google.com/calendar/r/week/")
   Return
 
   ~g & d::
-  run https://drive.google.com/drive/
+  goToSite("https://drive.google.com/drive/")
   Return
 
   ~g & h::
-  run https://github.com
+  goToSite("https://github.com/BvdLind")
+  Return
+
+  ~g & l::
+  goToSite("https://gitlab.fdmci.hva.nl/profile")
   Return
 
   ~y & t::
-  run https://youtube.com
+  goToSite("https://youtube.com")
   Return
 
+}
+goToSite(site) {
+#If GetKeyState("CapsLock")
+  Run, %site%
 }
