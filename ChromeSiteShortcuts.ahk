@@ -27,6 +27,7 @@
 
 }
 goToSite(site) {
-#If GetKeyState("CapsLock")
+ if GetKeyState("Alt")
   Run, %site%
+ else Return
 }
